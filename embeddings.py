@@ -61,23 +61,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# def embedding(
-#     text: str,
-#     engine: str = "text-similarity-babbage-001",
-#     cache=embedding_cache,
-#     cache_on_call=True,
-# ):
-#     """Returns embedding of text. Memoized to avoid recomputing.
-#     Text should have been cleaned to not have newlines.
-#     Queries and training are cached separately.
-#     """
-#     if (text, engine) not in cache:
-#         cache[(text, engine)] = get_embedding(text, engine)
-#         print("NOT FOUND")
-#         if cache_on_call:
-#             query_cache = embedding_cache.maps[0]
-#             with open(config.EMBEDDING_QUERY_CACHE_PATH, "wb") as cache_file:
-#                 pickle.dump(query_cache, cache_file)
-#     return cache[(text, engine)]
