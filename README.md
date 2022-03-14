@@ -13,7 +13,11 @@ The data files are not included, as they are too large. If cloned, this can not 
 Some screenshots:
 
 ![home page](https://github.com/hsherkat/openai-fragfinder/blob/master/screenshots/screenshot0.png)
+
 ![sample](https://github.com/hsherkat/openai-fragfinder/blob/master/screenshots/screenshot1.png)
+
 ![sample](https://github.com/hsherkat/openai-fragfinder/blob/master/screenshots/screenshot2.png)
+
 ![sample](https://github.com/hsherkat/openai-fragfinder/blob/master/screenshots/screenshot%20dustin.png)
+
 ![sample](https://github.com/hsherkat/openai-fragfinder/blob/master/screenshots/screenshot%20eric.png)
