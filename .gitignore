@@ -1,0 +1,7 @@
+__pycache__
+hiding
+
+.env
+
+*.pkl
+*.csv
