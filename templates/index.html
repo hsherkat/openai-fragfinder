@@ -12,8 +12,8 @@
     <form action="/" method="post">
         <label for="frag">What if your dream fragrance already exists? Write us a fictional review of the fragrance
             you'd like, and we'll recommend some to you:</label>
-        <textarea id="frag" name="frag" rows="8"
-            cols="75"> {{query or "Describe your desired fragrance in a few sentences..."}}</textarea>
+        <textarea id="frag" name="frag" rows="8" cols="75"
+            placeholder="Describe your desired fragrance in a few sentences...">{% if query %}{{query}}{% endif %}</textarea>
         <input type="submit" value="Get recommendations." />
     </form>
     {% if result %}
