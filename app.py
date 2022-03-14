@@ -13,13 +13,20 @@ app = Flask(__name__)
 
 @app.route("/", methods=("GET", "POST"))
 def index():
-    """Shut up pylint.
+    """Fragrance recommender app.
     """
     if request.method == "POST":
         frag_query = request.form["frag"]
-        recs = fragrance_recommender_alt(frag_query, fragrance_embeddings)
+        recs = fragrance_recommender(frag_query, df_reviews_and_embeddings)
+        formatted_recs = recs.copy()
         print(recs)
-        response = recs.to_html(index=False)
+        formatted_recs["Fragrance"] = recs.apply(
+            lambda row: f"{row['brand']}: {row['name']}", axis=1
+        )
+        formatted_recs.rename(
+            columns={"cleaned_review": "Relevant review"}, inplace=True
+        )
+        response = formatted_recs[["Fragrance", "Relevant review"]].to_html(index=False)
         return redirect(url_for("index", result=response, query=frag_query))
 
     result = request.args.get("result")
